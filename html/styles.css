@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  user-select: none; }
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 3; }
+
+  *:focus {
+    outline: none;
+  }
+/* 
+      Created on : 22-Jun-2015, 13:00:20
+      Author     : probinson
+      Based on    : https://codepen.io/schoenwaldnils/pen/JnIKA
+  */
+/*
+      following functions from
+      https://unindented.org/articles/trigonometry-in-sass/
+  */
+.circular-menu-container {
+  max-width: none;
+  width: auto;
+  display: flex;
+  align-items: center;
+  height: 100%; }
+
+.circular-menu {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  left: 50%;
+  margin: 0;
+  margin-left: -250px;
+  overflow: hidden;
+  border-radius: 500px;
+  border-radius: 50%;
+  z-index: 1;
+  list-style: none;
+  box-shadow: 0px 0px 15px #333; }
+
+.center-section {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -150px;
+  padding: 55px;
+  border-radius: 500px;
+  border-radius: 50%;
+  text-align: center;
+  background: #fff;
+  box-shadow: inset 0px 0px 5px #333;
+  display: none;
+  z-index: 1; }
+
+.center-section.section-intro {
+  display: block; }
+
+.circular-menu li:hover ~ .center-section.section-intro,
+.touch .circular-menu li:focus ~ .center-section.section-intro {
+  display: none; }
+
+.touch .circular-menu li:focus {
+  outline: 0; }
+
+.circular-menu li div.label {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  z-index: 2; }
+
+.circular-menu li div.label p {
+  text-align: center;
+  max-width: 99px;
+  margin: 0 auto;
+  margin-top: 60px;
+  color: #fff; }
+
+.circular-menu li span.arrow {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  display: block;
+  transition: all 300ms ease-out;
+  z-index: 2; }
+
+.circular-menu li .bg {
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  transform-origin: 0 250px;
+  margin-top: -250px;
+  left: 50%;
+  top: 50%;
+  transition: all 300ms ease-out; }
+
+.circular-menu li {
+  position: absolute;
+  text-decoration: none;
+  top: 50%;
+  left: 50%;
+  display: none; }
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 9px 30px;
+  background: #fa6022;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.507); }
+
+a:hover {
+  background: red;
+  box-shadow: 0 2px 0 black; }
+
+.label {
+  cursor: pointer; }
+
+.half-click {
+  background: rgba(88, 25, 25, 0.623) !important; }
+
+div.animated span {
+  background: black;
+  color: white;
+  padding: 2px; }
+
+.circular-menu li:nth-child(1) {
+  display: block; }
+
+.circular-menu li:nth-child(1) .bg {
+  transform: rotate(-54deg) skew(-18deg);
+  background: rgba(0, 0, 0, 0.5); }
+
+.circular-menu li:nth-child(1):hover .bg,
+.touch .circular-menu li:nth-child(1):focus .bg {
+  background: rgba(26, 26, 26, 0.5);
+  cursor: pointer; }
+
+.circular-menu li:nth-child(1):hover .fas {
+  color: #f7f45d; }
+
+.circular-menu li:nth-child(1) span.arrow {
+  transform: rotate(-45deg);
+  margin: -187.5px 0 0 -12.5px;
+  background: rgba(0, 0, 0, 0.5); }
+
+.circular-menu li:nth-child(1):hover span.arrow,
+.touch .circular-menu li:nth-child(1):focus span.arrow {
+  background: rgba(26, 26, 26, 0.5);
+  margin: -162.5px 0 0 -12.5px; }
+
+.circular-menu li:nth-child(1) div.label {
+  margin: -275px 0 0 -75px; }
+
+.circular-menu li:nth-child(1):hover div.center-section.section-1,
+.touch .circular-menu li:nth-child(1):focus div.center-section.section-1 {
+  display: block; }
+
+.circular-menu li:nth-child(2) {
+  display: block; }
+
+.circular-menu li:nth-child(2) .bg {
+  transform: rotate(18deg) skew(-18deg);
+  background: rgba(0, 0, 0, 0.8); }
+
+.circular-menu li:nth-child(2):hover .bg,
+.touch .circular-menu li:nth-child(2):focus .bg {
+  background: rgba(26, 26, 26, 0.8);
+  cursor: pointer; }
+
+.circular-menu li:nth-child(2):hover .fas {
+  color: #f7f45d; }
+
+.circular-menu li:nth-child(2) span.arrow {
+  transform: rotate(27deg);
+  margin: -66.57797px 0 0 153.93489px;
+  background: rgba(0, 0, 0, 0.8); }
+
+.circular-menu li:nth-child(2):hover span.arrow,
+.touch .circular-menu li:nth-child(2):focus span.arrow {
+  background: rgba(26, 26, 26, 0.8);
+  margin: -58.85255px 0 0 130.15848px; }
+
+.circular-menu li:nth-child(2) div.label {
+  margin: -136.8034px 0 0 115.2113px; }
+
+.circular-menu li:nth-child(2):hover div.center-section.section-2,
+.touch .circular-menu li:nth-child(2):focus div.center-section.section-2 {
+  display: block; }
+
+.circular-menu li:nth-child(3) {
+  display: block; }
+
+.circular-menu li:nth-child(3) .bg {
+  transform: rotate(90deg) skew(-18deg);
+  background: rgba(0, 0, 0, 0.5); }
+
+.circular-menu li:nth-child(3):hover .bg,
+.touch .circular-menu li:nth-child(3):focus .bg {
+  background: rgba(26, 26, 26, 0.5);
+  cursor: pointer; }
+
+.circular-menu li:nth-child(3):hover .fas {
+  color: #f7f45d; }
+
+.circular-menu li:nth-child(3) span.arrow {
+  transform: rotate(99deg);
+  margin: 129.07797px 0 0 90.36242px;
+  background: rgba(0, 0, 0, 0.5); }
+
+.circular-menu li:nth-child(3):hover span.arrow,
+.touch .circular-menu li:nth-child(3):focus span.arrow {
+  background: rgba(26, 26, 26, 0.5);
+  margin: 108.85255px 0 0 75.66779px; }
+
+.circular-menu li:nth-child(3) div.label {
+  margin: 86.8034px 0 0 42.55705px; }
+
+.circular-menu li:nth-child(3):hover div.center-section.section-3,
+.touch .circular-menu li:nth-child(3):focus div.center-section.section-3 {
+  display: block; }
+
+.circular-menu li:nth-child(4) {
+  display: block; }
+
+.circular-menu li:nth-child(4) .bg {
+  transform: rotate(162deg) skew(-18deg);
+  background: rgba(0, 0, 0, 0.5); }
+
+.circular-menu li:nth-child(4):hover .bg,
+.touch .circular-menu li:nth-child(4):focus .bg {
+  background: rgba(26, 26, 26, 0.5);
+  cursor: pointer; }
+
+.circular-menu li:nth-child(4):hover .fas {
+  color: #f7f45d; }
+
+.circular-menu li:nth-child(4) span.arrow {
+  transform: rotate(171deg);
+  margin: 129.07797px 0 0 -115.36242px;
+  background: rgba(0, 0, 0, 0.5); }
+
+.circular-menu li:nth-child(4):hover span.arrow,
+.touch .circular-menu li:nth-child(4):focus span.arrow {
+  background: rgba(26, 26, 26, 0.5);
+  margin: 108.85255px 0 0 -100.66779px; }
+
+.circular-menu li:nth-child(4) div.label {
+  margin: 86.8034px 0 0 -192.55705px; }
+
+.circular-menu li:nth-child(4):hover div.center-section.section-4,
+.touch .circular-menu li:nth-child(4):focus div.center-section.section-4 {
+  display: block; }
+
+.circular-menu li:nth-child(5) {
+  display: block; }
+
+.circular-menu li:nth-child(5) .bg {
+  transform: rotate(234deg) skew(-18deg);
+  background: rgba(0, 0, 0, 0.8); }
+
+.circular-menu li:nth-child(5):hover .bg,
+.touch .circular-menu li:nth-child(5):focus .bg {
+  background: rgba(26, 26, 26, 0.8);
+  cursor: pointer; }
+
+.circular-menu li:nth-child(5):hover .fas {
+  color: #f7f45d; }
+
+.circular-menu li:nth-child(5) span.arrow {
+  transform: rotate(243deg);
+  margin: -66.57797px 0 0 -178.93489px;
+  background: rgba(0, 0, 0, 0.8); }
+
+.circular-menu li:nth-child(5):hover span.arrow,
+.touch .circular-menu li:nth-child(5):focus span.arrow {
+  background: rgba(26, 26, 26, 0.8);
+  margin: -58.85255px 0 0 -155.15848px; }
+
+.circular-menu li:nth-child(5) div.label {
+  margin: -136.8034px 0 0 -265.2113px; }
+
+.circular-menu li:nth-child(5):hover div.center-section.section-5,
+.touch .circular-menu li:nth-child(5):focus div.center-section.section-5 {
+  display: block; }
+
+.animated {
+  animation-duration: 0.75s;
+  animation-fill-mode: both; }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+
+.fadeInUp {
+  animation-name: fadeInUp; }

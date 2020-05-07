@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .fas {
+            font-size: 38px;
+            text-shadow: 0 0 5px black;
+        }
+
+        .fas.red {
+            color: rgb(248, 47, 47);
+        }
+    </style>
+</head>
+<body>
+    <div class="circular-menu-container" id='main'>
+        <ul class="circular-menu">
+        <li class="" tabindex="1">
+            <div class="center-section section-1">
+            <div class="animated fadeInUp">
+                <h2 id='take-over-name'>Takeover</h2>
+                <span id='take-over-desc'>Start takeover of a teritory you are standing on.</span>
+            </div>
+            </div>
+            <div class="bg"></div>
+            <div class="label">
+            <p><i class="fas fa-fist-raised red"></i></p>
+            </div>
+        </li>
+        <li class="" tabindex="2">
+            <div class="center-section section-2">
+            <div class="animated fadeInUp">
+                <h2 id='armour-name'>Armour</h2>
+                <span id='armour-desc'>Repair your armour.</span>
+            </div>
+            </div>
+            <div class="bg"></div>
+            <div class="label">
+            <p><i class="fas fa-shield-alt"></i><br>
+                <span id="armor">0/3</span>
+            </p>
+            </div>
+        </li>
+        <li class="" tabindex="3">
+            <div class="center-section section-3">
+            <div class="animated fadeInUp">
+                <h2 id='change-gang-name'>Change gang</h2>
+                <span id='change-gang-desc'>Change a gang you are currenly in.</span>
+            </div>
+            </div>
+            <div class="bg"></div>
+            <div class="label">
+            <p><i class="fas fa-users"></i></p>
+            </div>
+        </li>
+        <li class="" tabindex="4">
+            <div class="center-section section-4">
+            <div class="animated fadeInUp">
+                <h2 id='-shop-name'>Shop</h2>
+                <span id='-shop-desc'>Open shop menu.</span>
+            </div>
+            </div>
+            <div class="bg"></div>
+            <div class="label">
+            <p><i class="fas fa-shopping-basket"></i></p>
+            </div>
+        </li>
+        <li class="" tabindex="5">
+            <div class="center-section section-5">
+            <div class="animated fadeInUp">
+                <h2 id='aid-kit-name'>First Aid Kit</h2>
+                <span id='aid-kit-desc'>Heal yourself.</span>
+            </div>
+            </div>
+            <div class="bg"></div>
+            <div class="label">
+            <p><i class="fas fa-briefcase-medical"></i><br>
+                <span id="hp">0/3</span>
+            </p>
+            </div>
+        </li>
+        
+        <div class="center-section section-intro">
+            <div class="animated fadeInUp">
+            <h2>Ragekill.pl</h2>
+            <p style="text-decoration: underline;" id='help-msg'>DOUBLE CLICK TO SELECT</p>
+            </div>
+        </div>
+        </ul>
+    </div>
+    
+    <script>
+        $('#main').hide();
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
